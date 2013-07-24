@@ -1,0 +1,14 @@
+{
+  "name": "Static-Grunt-Website-Template",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-stylus": "~0.6.0",
+    "grunt-contrib-jade": "~0.7.0",
+    "grunt-browserify": "~1.2.0",
+    "grunt-contrib-watch": "~0.5.1",
+    "through": "~2.3.4",
+    "jade": "~0.33.0"
+  }
+}
