@@ -14,6 +14,8 @@ $('[data-hex]').each(function(){
 // Correct review height
 var docHeight = $(window).height()
 $('.landing').height(docHeight)
+$('.tags').height(docHeight)
+$('.submit').height(docHeight)
 $('.review').each(function(){
   $(this).height(docHeight)
 })

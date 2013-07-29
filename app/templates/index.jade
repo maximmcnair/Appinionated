@@ -1,32 +1,6 @@
 extends layout
 block content
   .container.home
-    section.submit
-      .wrapper
-        h1.landing-header Submit your app
-        form
-          input(type="text", placeholder="URL of app store")
-          input(type="text", placeholder="Redem Code")
-          a.btn Submit
-        small All submisions are subject to approval
-
-    section.tags
-      .wrapper
-        h1.landing-header Tags
-        ul
-          li
-            a(href="#") Games
-          li
-            a(href="#") Weather
-          li
-            a(href="#") Social
-          li
-            a(href="#") Business
-          li
-            a(href="#") Free
-          li
-            a(href="#") Education
-
     section.landing
       .wrapper
         h1.landing-header Appinionated
@@ -225,3 +199,29 @@ block content
                 img(src="/imgs/dots/IMG_1463.png")
         .review__desc
           h2 Dots
+
+    section.submit
+      .wrapper
+        h1 Submit your app
+        form
+          input(type="text", placeholder="URL of app store")
+          input(type="text", placeholder="Redem Code")
+          a.btn Submit
+        small All submisions are subject to approval
+
+    section.tags
+      .wrapper
+        h1 Tags
+        ul
+          li
+            a(href="#") Games
+          li
+            a(href="#") Weather
+          li
+            a(href="#") Social
+          li
+            a(href="#") Business
+          li
+            a(href="#") Free
+          li
+            a(href="#") Education
