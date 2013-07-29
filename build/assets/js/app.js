@@ -5,7 +5,9 @@ $('[data-hex]').each(function(){
     , color = '#' + element.data('hex')
 
   element.css('background-color', color)
-  console.log(color)
+    // Add color to btn
+    .find('.btn').css('color',color)
+  // console.log(color)
 })
 
 
@@ -50,7 +52,9 @@ $(document).keydown(function (evt) {
 $(window).load(function () {
   $('.review__images').each(function () {
     $(this).flexslider({
-
+      slideshowSpeed: 4000
+    , controlNav: true
+    , directionNav: true
     })
   })
 })

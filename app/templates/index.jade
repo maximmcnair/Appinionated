@@ -1,20 +1,76 @@
 extends layout
 block content
   .container.home
+    section.submit
+      .wrapper
+        h1.landing-header Submit your app
+        form
+          input(type="text", placeholder="URL of app store")
+          input(type="text", placeholder="Redem Code")
+          a.btn Submit
+        small All submisions are subject to approval
+
+    section.tags
+      .wrapper
+        h1.landing-header Tags
+        ul
+          li
+            a(href="#") Games
+          li
+            a(href="#") Weather
+          li
+            a(href="#") Social
+          li
+            a(href="#") Business
+          li
+            a(href="#") Free
+          li
+            a(href="#") Education
+
     section.landing
       .wrapper
         h1.landing-header Appinionated
-        p.landing-desc We aim to bring you short and concise reviews on only well designed apps for the iPhone.
-      .phone--top
-      .phone--bottom
+        p.landing-desc
+          | Bringing you short and concise reviews on only the best designed apps 
+          | &amp; games for the iPhone and iPad.
+      a(href="/fall-chess/").phone--top
+      a(href="/thinglist/").phone--bottom
       .arrow-down.js-review-first
 
-    section.review(data-hex="514b56")
+    section(data-hex="08302d").review.review--text--light.review--landscape
       .wrapper
         .review__images
-          ul.slides
-            li
-              img(src="/imgs/random-heros-2/1.png")
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/sword-and-sorcery/IMG_1497.png")
+              li
+                img(src="/imgs/sword-and-sorcery/IMG_1500.png")
+              li
+                img(src="/imgs/sword-and-sorcery/IMG_1502.png")
+              li
+                img(src="/imgs/sword-and-sorcery/IMG_1515.png")
+              li
+                img(src="/imgs/sword-and-sorcery/IMG_1516.png")
+        .review__desc
+          h2 Sword and Sorcery
+          p
+            | Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit 
+            | amet non magna. Curabitur blandit tempus porttitor. Nulla vitae elit 
+            | libero, a pharetra augue.
+          p
+            | Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus 
+            | porttitor. Etiam porta sem malesuada magna mollis euismod. Etiam porta 
+            | sem malesuada magna mollis euismod.
+          a(href="#").btn View App
+
+    section(data-hex="514b56").review.review--text--light.review--landscape
+      .wrapper
+        .review__images
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/random-heros-2/1.png")
         .review__desc
           h2 Random Heros 2
           p
@@ -25,17 +81,19 @@ block content
             | Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus 
             | porttitor. Etiam porta sem malesuada magna mollis euismod. Etiam porta 
             | sem malesuada magna mollis euismod.
+          a(href="#").btn View App
 
-    section.review(data-hex="34343f")
+    section(data-hex="00a47a").review.review--portrait.review--text--light.review--phone--light
       .wrapper
         .review__images
-          ul.slides
-            li
-              img(src="/imgs/thinglist/1.png")
-            li
-              img(src="/imgs/thinglist/2.png")
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/thinglist/1.png")
+              li
+                img(src="/imgs/thinglist/2.png")
         .review__desc
-          h2 Thinglist
+          h2 Vine
           p
             | Nullam quis risus eget urna mollis ornare vel eu leo varius blandit sit 
             | amet non magna. Curabitur blandit tempus porttitor. Vitae elit mollis
@@ -45,17 +103,19 @@ block content
             | Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus 
             | eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis 
             | euismod. Fusce dapibus, tellus ac cursus commodo.
+          a(href="#").btn View App
 
-    section.review(data-hex="D52D39")
+    section(data-hex="D52D39").review.review--portrait.review--text--light.review--phone--dark
       .wrapper
         .review__images
-          ul.slides
-            li
-              img(src="/imgs/pudding-monsters/1.png")
-            li
-              img(src="/imgs/pudding-monsters/2.png")
-            li
-              img(src="/imgs/pudding-monsters/3.png")
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/pudding-monsters/1.png")
+              li
+                img(src="/imgs/pudding-monsters/2.png")
+              li
+                img(src="/imgs/pudding-monsters/3.png")
         .review__desc
           h2 Pudding Monsters
           p
@@ -67,3 +127,101 @@ block content
             | Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus 
             | eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis 
             | euismod. Fusce dapibus, tellus ac cursus commodo.
+          a(href="#").btn View App
+
+    section(data-hex="0E91A0").review.review--portrait.review--text--light.review--phone--dark
+      .wrapper
+        .review__images
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/lumosity/1.jpg")
+              li
+                img(src="/imgs/lumosity/2.png")
+              li
+                img(src="/imgs/lumosity/3.png")
+              li
+                img(src="/imgs/lumosity/4.png")
+        .review__desc
+          h2 Lumosity
+          p
+            | Lumosity is very polished brain training game thats aims to improve your mental ability through a variety of different mental tasks.
+          p
+            | While these apps are generally seen to not actually improve brain activity, this game does offer absorbing and engaging game play that will keep you coming back again and again.
+          a(href="#").btn View App
+
+    section(data-hex="92DA2B").review.review--portrait.review--text--light.review--phone--dark
+      .wrapper
+        .review__images
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/duolingo/1.png")
+              li
+                img(src="/imgs/duolingo/2.png")
+        .review__desc
+          h2 Duolingo
+
+    section(data-hex="F0EFEC").review.review--portrait.review--text--dark.review--phone--dark
+      .wrapper
+        .review__images
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/letterpress/1.png")
+              li
+                img(src="/imgs/letterpress/2.png")
+              li
+                img(src="/imgs/letterpress/3.png")
+        .review__desc
+          h2 Letterpress
+
+    section(data-hex="008FD5").review.review--portrait.review--text--light.review--phone--dark
+      .wrapper
+        .review__images
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/rdio/1.png")
+              li
+                img(src="/imgs/rdio/2.png")
+        .review__desc
+          h2 Rdio
+
+    section(data-hex="87C442").review.review--portrait.review--text--light.review--phone--dark
+      .wrapper
+        .review__images
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/kickstarter/1.png")
+              li
+                img(src="/imgs/kickstarter/2.png")
+        .review__desc
+          h2 Kickstarter
+
+    section(data-hex="008FD5").review.review--landscape.review--text--light.review--phone--light
+      .wrapper
+        .review__images
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/tiny-wings/IMG_1452.png")
+              li
+                img(src="/imgs/tiny-wings/IMG_1455.png")
+              li
+                img(src="/imgs/tiny-wings/IMG_1457.png")
+        .review__desc
+          h2 Tiny Wings
+
+    section(data-hex="8cbaff").review.review--portrait.review--text--light.review--phone--light
+      .wrapper
+        .review__images
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/dots/IMG_1462.png")
+              li
+                img(src="/imgs/dots/IMG_1463.png")
+        .review__desc
+          h2 Dots
