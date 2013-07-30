@@ -13,6 +13,8 @@ $('[data-hex]').each(function(){
 
 // Correct review height
 var docHeight = $(window).height()
+
+// Adjust height
 $('.landing').height(docHeight)
 $('.tags').height(docHeight)
 $('.submit').height(docHeight)
@@ -20,28 +22,46 @@ $('.review').each(function(){
   $(this).height(docHeight)
 })
 
+// Find window position from top
+function updateCurrentSection() {
+  var postFromTop = $(document).scrollTop()
+  currentSection = parseFloat(postFromTop / docHeight).toFixed(0)
+}
+
+setTimeout(function () {
+  updateCurrentSection()
+}, 600)
+
+
+$(window).scroll(function () {
+  updateCurrentSection()
+})
+
+
 
 // Keyboard nav
-var currentReview = 0
+var currentSection = 0
+  , sectionCount = $('section').length - 1
 
 $(document).keydown(function (evt) {
   if ( evt.keyCode === 40 ) { // down arrow
-    if( currentReview !== ( $('.post').length - 1 ) ){
-      evt.preventDefault(); // prevents the usual scrolling behaviour
+    console.log( currentSection, sectionCount )
+    if( currentSection < sectionCount ){
+      evt.preventDefault() // prevents the usual scrolling behaviour
 
-      currentReview++
+      currentSection++
 
-      var scrollTo23 = $('section').eq(currentReview).offset().top;
+      var scrollTo23 = $('section').eq(currentSection).offset().top
 
       $('body').animate({
         scrollTop: scrollTo23
       })
     }
   } else if (evt.keyCode === 38) { // up arrow
-    if( currentReview !== 0 ){
-      evt.preventDefault();
-      currentReview--
-      var scrollTo23 = $('section').eq(currentReview).offset().top;
+    if( currentSection !== 0 ){
+      evt.preventDefault()
+      currentSection--
+      var scrollTo23 = $('section').eq(currentSection).offset().top
       $('body').animate({
         scrollTop: scrollTo23
       })

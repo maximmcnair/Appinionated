@@ -23,6 +23,7 @@ input:focus{background-color:#233f56}
 :-moz-placeholder{color:#fff}
 ::-moz-placeholder{color:#fff}
 :-ms-input-placeholder{color:#fff}
+.header{position:absolute;top:40px;right:0}
 .review{display:block;overflow:hidden}
 .review__images{width:48.93617021276596%;margin:0 2.127659574468085% 0 0;float:left}
 .review__desc{width:48.93617021276596%;float:right;margin:0;}
