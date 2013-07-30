@@ -7,7 +7,6 @@ $('[data-hex]').each(function(){
   element.css('background-color', color)
     // Add color to btn
     .find('.btn').css('color',color)
-  // console.log(color)
 })
 
 
@@ -45,7 +44,6 @@ var currentSection = 0
 
 $(document).keydown(function (evt) {
   if ( evt.keyCode === 40 ) { // down arrow
-    console.log( currentSection, sectionCount )
     if( currentSection < sectionCount ){
       evt.preventDefault() // prevents the usual scrolling behaviour
 
