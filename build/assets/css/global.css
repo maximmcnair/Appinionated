@@ -50,6 +50,8 @@ input:focus{background-color:#233f56}
 .landing-header{padding-top:260px;color:#483d4e;margin-bottom:15px}
 .landing-desc{color:#fff;max-width:400px;margin:0 auto}
 .arrow-down{display:block;width:42px;height:17px;background:url("/imgs/arrow.png");position:absolute;margin-left:-21px;bottom:55px;left:50%;-webkit-animation:arrowMovement 10s linear infinite;-moz-animation:arrowMovement 10s linear infinite;-o-animation:arrowMovement 10s linear infinite;-ms-animation:arrowMovement 10s linear infinite;animation:arrowMovement 10s linear infinite}
+.mail-to{color:#483d4e;cursor:pointer;}
+.mail-to:hover{color:#413746}
 @-moz-keyframes arrowMovement{0%{-webkit-transform:translate(0,0);-moz-transform:translate(0,0);-o-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}
 50%{-webkit-transform:translate(0,8px);-moz-transform:translate(0,8px);-o-transform:translate(0,8px);-ms-transform:translate(0,8px);transform:translate(0,8px)}
 100%{-webkit-transform:translate(0,0);-moz-transform:translate(0,0);-o-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}
@@ -74,3 +76,4 @@ input:focus{background-color:#233f56}
 .submit h1{color:#fff}
 .submit small{margin-top:25px;display:block}
 .submit .btn:hover{background:#233f56}
+.follow-btn{margin-top:35px}

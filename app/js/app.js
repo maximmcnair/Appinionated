@@ -49,7 +49,6 @@ $(document).keydown(function (evt) {
       currentSection++
 
       var scrollTo23 = $('section').eq(currentSection).offset().top
-
       $('body').animate({
         scrollTop: scrollTo23
       })
