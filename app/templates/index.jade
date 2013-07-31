@@ -21,11 +21,19 @@ block content
           a(href="mailto:mail@maximmcnair.com?subject=Here's%20my%20app&body=Remember to send us a redeem code if it's a priced app.").mail-to
             |Send us your app
 
-      a(href="/fall-chess/").phone--top
-      a(href="/thinglist/").phone--bottom
+      .keyboard-nav
+        .up
+          i.icon-arrow-up
+        .left
+        .down
+          i.icon-arrow-down
+        .right
+
+      a(href="/#tall-chess").phone--top
+      a(href="/#thinglist").phone--bottom
       .arrow-down.js-review-first
 
-    section(data-hex="08302d").review.review--text--light.review--landscape
+    section(data-hex="08302d", id="sword-and-sorcery").review.review--text--light.review--landscape
       .wrapper
         .review__images
           .review__image__wrapper
@@ -52,7 +60,7 @@ block content
             | sem malesuada magna mollis euismod.
           a(href="#").btn View App
 
-    section(data-hex="514b56").review.review--text--light.review--landscape
+    section(data-hex="514b56", id="random-heros-2").review.review--text--light.review--landscape
       .wrapper
         .review__images
           .review__image__wrapper
@@ -71,7 +79,7 @@ block content
             | sem malesuada magna mollis euismod.
           a(href="#").btn View App
 
-    section(data-hex="b38fc3").review.review--portrait.review--text--light.review--phone--light
+    section(data-hex="b38fc3", id="thinglist").review.review--portrait.review--text--light.review--phone--light
       .wrapper
         .review__images
           .review__image__wrapper
@@ -93,7 +101,7 @@ block content
             | euismod. Fusce dapibus, tellus ac cursus commodo.
           a(href="#").btn View App
 
-    section(data-hex="00a47a").review.review--portrait.review--text--light.review--phone--light
+    section(data-hex="00a47a", id="vine").review.review--portrait.review--text--light.review--phone--light
       .wrapper
         .review__images
           .review__image__wrapper
@@ -111,7 +119,7 @@ block content
             | euismod. Fusce dapibus, tellus ac cursus commodo.
           a(href="#").btn View App
 
-    section(data-hex="D52D39").review.review--portrait.review--text--light.review--phone--dark
+    section(data-hex="D52D39", id="pudding-monsters").review.review--portrait.review--text--light.review--phone--dark
       .wrapper
         .review__images
           .review__image__wrapper
@@ -135,7 +143,7 @@ block content
             | euismod. Fusce dapibus, tellus ac cursus commodo.
           a(href="#").btn View App
 
-    section(data-hex="0E91A0").review.review--portrait.review--text--light.review--phone--dark
+    section(data-hex="0E91A0", id="lumosity").review.review--portrait.review--text--light.review--phone--dark
       .wrapper
         .review__images
           .review__image__wrapper
@@ -156,7 +164,7 @@ block content
             | While these apps are generally seen to not actually improve brain activity, this game does offer absorbing and engaging game play that will keep you coming back again and again.
           a(href="#").btn View App
 
-    section(data-hex="92DA2B").review.review--portrait.review--text--light.review--phone--dark
+    section(data-hex="92DA2B", id="duolingo").review.review--portrait.review--text--light.review--phone--dark
       .wrapper
         .review__images
           .review__image__wrapper
@@ -168,7 +176,7 @@ block content
         .review__desc
           h2 Duolingo
 
-    section(data-hex="F0EFEC").review.review--portrait.review--text--dark.review--phone--dark
+    section(data-hex="F0EFEC", id="letterpress").review.review--portrait.review--text--dark.review--phone--dark
       .wrapper
         .review__images
           .review__image__wrapper
@@ -182,7 +190,7 @@ block content
         .review__desc
           h2 Letterpress
 
-    section(data-hex="008FD5").review.review--portrait.review--text--light.review--phone--dark
+    section(data-hex="008FD5", id="rdio").review.review--portrait.review--text--light.review--phone--dark
       .wrapper
         .review__images
           .review__image__wrapper
@@ -194,7 +202,7 @@ block content
         .review__desc
           h2 Rdio
 
-    section(data-hex="87C442").review.review--portrait.review--text--light.review--phone--dark
+    section(data-hex="87C442", id="kickstarter").review.review--portrait.review--text--light.review--phone--dark
       .wrapper
         .review__images
           .review__image__wrapper
@@ -206,7 +214,7 @@ block content
         .review__desc
           h2 Kickstarter
 
-    section(data-hex="008FD5").review.review--landscape.review--text--light.review--phone--light
+    section(data-hex="008FD5", id="tiny-wings").review.review--landscape.review--text--light.review--phone--light
       .wrapper
         .review__images
           .review__image__wrapper
@@ -220,7 +228,7 @@ block content
         .review__desc
           h2 Tiny Wings
 
-    section(data-hex="8cbaff").review.review--portrait.review--text--light.review--phone--light
+    section(data-hex="8cbaff", id="dots").review.review--portrait.review--text--light.review--phone--light
       .wrapper
         .review__images
           .review__image__wrapper
@@ -231,6 +239,18 @@ block content
                 img(src="/imgs/dots/IMG_1463.PNG")
         .review__desc
           h2 Dots
+
+    section(data-hex="86ad46", id="tall-chess").review.review--portrait.review--text--light.review--phone--light
+      .wrapper
+        .review__images
+          .review__image__wrapper
+            ul.slides
+              li
+                img(src="/imgs/tall-chess/2.PNG")
+              li
+                img(src="/imgs/tall-chess/1.PNG")
+        .review__desc
+          h2 Tall Chess
 
     //- section.submit
     //-   .wrapper

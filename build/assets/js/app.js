@@ -24,7 +24,14 @@ $('.review').each(function(){
 // Find window position from top
 function updateCurrentSection() {
   var postFromTop = $(document).scrollTop()
-  currentSection = parseFloat(postFromTop / docHeight).toFixed(0)
+    , section = parseFloat(postFromTop / docHeight).toFixed(0)
+
+  if(currentSection !== section){
+    currentSection = section
+    var title = $('section').eq(currentSection).find('h2').html().replace(/\s+/g, '-').toLowerCase()
+    // window.location.hash = title
+    if ( history.pushState ) window.history.pushState("", "", '#' + title)
+  }
 }
 
 setTimeout(function () {
@@ -35,8 +42,6 @@ setTimeout(function () {
 $(window).scroll(function () {
   updateCurrentSection()
 })
-
-
 
 // Keyboard nav
 var currentSection = 0
@@ -78,5 +83,20 @@ $(window).load(function () {
   })
 })
 
+// Review first
+$('.js-review-first').on('click', function () {
+  scrollToElement('#sword-and-sorcery', 600)
+})
+
+function scrollToElement(selector, time, verticalOffset) {
+  time = typeof(time) != 'undefined' ? time : 1000;
+  verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+  element = $(selector);
+  offset = element.offset();
+  offsetTop = offset.top + verticalOffset;
+  $('html, body').animate({
+    scrollTop: offsetTop
+  }, time);
+}
 },{}]},{},[1])
 ;

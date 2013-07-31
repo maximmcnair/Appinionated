@@ -12,7 +12,7 @@ h1{font-size:84px;text-align:center}
 h2{font-size:40px;margin:0 0 10px 0}
 a{text-decoration:none;font-weight:800}
 small{color:#fff;font-size:16px}
-.wrapper{width:80%;max-width:1440px;margin:0 auto}
+.wrapper{width:1000px;margin:0 auto}
 a.btn,.btn{padding:15px 30px;margin-right:10px;-webkit-border-radius:4px;border-radius:4px;display:inline-block;background-color:rgba(0,0,0,0.2);color:#fff;font-size:18px;font-weight:800;-webkit-transition:background-color 1s;-moz-transition:background-color 1s;-o-transition:background-color 1s;-ms-transition:background-color 1s;transition:background-color 1s;cursor:pointer}
 a.btn:hover,.btn:hover{background-color:rgba(0,0,0,0.2)}
 .input-clear,input{outline:0;border:0;background:transparent}
@@ -52,6 +52,13 @@ input:focus{background-color:#233f56}
 .arrow-down{display:block;width:42px;height:17px;background:url("/imgs/arrow.png");position:absolute;margin-left:-21px;bottom:55px;left:50%;-webkit-animation:arrowMovement 10s linear infinite;-moz-animation:arrowMovement 10s linear infinite;-o-animation:arrowMovement 10s linear infinite;-ms-animation:arrowMovement 10s linear infinite;animation:arrowMovement 10s linear infinite}
 .mail-to{color:#483d4e;cursor:pointer;}
 .mail-to:hover{color:#413746}
+.keyboard-nav{position:absolute;bottom:50px;left:50px;}
+.keyboard-nav div{width:30px;height:30px;display:block;border:2px solid #fff;-webkit-border-radius:3px;border-radius:3px;margin:3px;}
+.keyboard-nav div i{margin-top:7px;color:#fff;display:block;font-size:13px}
+.keyboard-nav .left,.keyboard-nav .right,.keyboard-nav .down{float:left}
+.keyboard-nav .up{margin-left:39px}
+.keyboard-nav .down,.keyboard-nav .up{opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80)}
+.keyboard-nav .left,.keyboard-nav .right{opacity:.4;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";filter:alpha(opacity=40)}
 @-moz-keyframes arrowMovement{0%{-webkit-transform:translate(0,0);-moz-transform:translate(0,0);-o-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}
 50%{-webkit-transform:translate(0,8px);-moz-transform:translate(0,8px);-o-transform:translate(0,8px);-ms-transform:translate(0,8px);transform:translate(0,8px)}
 100%{-webkit-transform:translate(0,0);-moz-transform:translate(0,0);-o-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}
