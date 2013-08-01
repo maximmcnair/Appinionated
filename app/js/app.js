@@ -27,9 +27,13 @@ function updateCurrentSection() {
 
   if(currentSection !== section){
     currentSection = section
-    var title = $('section').eq(currentSection).find('h2').html().replace(/\s+/g, '-').toLowerCase()
-    // window.location.hash = title
-    if ( history.pushState ) window.history.pushState("", "", '#' + title)
+    var h2 = $('section').eq(currentSection).find('h2').html()
+
+    if(h2){
+      var title = $('section').eq(currentSection).find('h2').html().replace(/\s+/g, '-').toLowerCase()
+      // window.location.hash = title
+      if ( history.pushState ) window.history.pushState("", "", '#' + title)
+    }
   }
 }
 

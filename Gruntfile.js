@@ -7,6 +7,14 @@ module.exports = function(grunt) {
           , files: { 'build/assets/css/global.css': 'app/stylus/main.styl' }
           }
         }
+      , connect:
+        { server:
+          { options:
+            { port: 3001
+            , base: 'build'
+            }
+          }
+        }
       , jade:
         { compile:
           { options:
@@ -57,9 +65,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-stylus')
   grunt.loadNpmTasks('grunt-contrib-jade')
   grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-contrib-connect')
   grunt.loadNpmTasks('grunt-browserify')
 
   // Default task.
-  grunt.registerTask('default', ['stylus', 'jade', 'browserify', 'watch'])
+  grunt.registerTask('default', ['stylus', 'jade', 'browserify', 'connect', 'watch'])
   grunt.registerTask('build', ['stylus', 'jade'])
 }
