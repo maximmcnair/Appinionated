@@ -14,12 +14,20 @@ $('[data-hex]').each(function(){
 var docHeight = $(window).height()
 
 // Adjust height
+function adjustHeight ($elem) {
+  var currentHeight = $elem.height()
+  if(docHeight > $elem.height()){
+    $elem.height(docHeight)
+  }
+}
+
 $('.landing').height(docHeight)
-$('.tags').height(docHeight)
-$('.submit').height(docHeight)
+// $('.tags').height(docHeight)
+// $('.submit').height(docHeight)
 $('.review').each(function(){
-  $(this).height(docHeight)
+  adjustHeight( $(this) )
 })
+
 
 // Init flexslider
 $(window).load(function () {
