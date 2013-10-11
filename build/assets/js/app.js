@@ -21,11 +21,21 @@ function adjustHeight ($elem) {
   }
 }
 
-$('.landing').height(docHeight)
-// $('.tags').height(docHeight)
-// $('.submit').height(docHeight)
-$('.review').each(function(){
-  adjustHeight( $(this) )
+function resize(){
+  $('.landing').height(docHeight)
+  // $('.tags').height(docHeight)
+  // $('.submit').height(docHeight)
+  $('.review').each(function(){
+    adjustHeight( $(this) )
+  })
+}
+
+resize()
+
+$( window ).resize(function() {
+  docHeight = $(window).height()
+  console.log('resize')
+  resize()
 })
 
 
