@@ -128,7 +128,6 @@ $(document).keydown(function (evt) {
   }
 })
 
-
 // // Change section on scroll
 // var readyToScroll = true
 // $(document).bind('mousewheel DOMMouseScroll', function (evt) {
