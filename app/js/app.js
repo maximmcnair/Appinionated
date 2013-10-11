@@ -20,61 +20,6 @@ $('.review').each(function(){
   $(this).height(docHeight)
 })
 
-// Find window position from top
-function updateCurrentSection() {
-  var postFromTop = $(document).scrollTop()
-    , section = parseFloat(postFromTop / docHeight).toFixed(0)
-
-  if(currentSection !== section){
-    currentSection = section
-    var h2 = $('section').eq(currentSection).find('h2').html()
-
-    if(h2){
-      var title = $('section').eq(currentSection).find('h2').html().replace(/\s+/g, '-').toLowerCase()
-      // window.location.hash = title
-      if ( history.pushState ) window.history.pushState("", "", '#' + title)
-    }
-  }
-}
-
-setTimeout(function () {
-  updateCurrentSection()
-}, 600)
-
-
-$(window).scroll(function () {
-  updateCurrentSection()
-})
-
-// Keyboard nav
-var currentSection = 0
-  , sectionCount = $('section').length - 1
-
-$(document).keydown(function (evt) {
-  if ( evt.keyCode === 40 ) { // down arrow
-    if( currentSection < sectionCount ){
-      evt.preventDefault() // prevents the usual scrolling behaviour
-
-      currentSection++
-
-      var scrollTo23 = $('section').eq(currentSection).offset().top
-      $('body').animate({
-        scrollTop: scrollTo23
-      })
-    }
-  } else if (evt.keyCode === 38) { // up arrow
-    if( currentSection !== 0 ){
-      evt.preventDefault()
-      currentSection--
-      var scrollTo23 = $('section').eq(currentSection).offset().top
-      $('body').animate({
-        scrollTop: scrollTo23
-      })
-    }
-  }
-});
-
-
 // Init flexslider
 $(window).load(function () {
   $('.review__images').each(function () {
@@ -101,3 +46,87 @@ function scrollToElement(selector, time, verticalOffset) {
     scrollTop: offsetTop
   }, time);
 }
+
+
+
+// Find window position from top
+function updateCurrentSection() {
+  var postFromTop = $(document).scrollTop()
+    , section = parseFloat(postFromTop / docHeight).toFixed(0)
+
+  if(currentSection !== section){
+    currentSection = section
+    var h2 = $('section').eq(currentSection).find('h2').html()
+
+    if(h2){
+      var title = $('section').eq(currentSection).find('h2').html().replace(/\s+/g, '-').toLowerCase()
+      // window.location.hash = title
+      if ( history.pushState ) window.history.pushState("", "", '#' + title)
+    }
+  }
+}
+
+setTimeout(function () {
+  updateCurrentSection()
+}, 600)
+
+
+$(window).scroll(function () {
+  updateCurrentSection()
+})
+
+var page = {
+  up: function () {
+    if( currentSection !== 0 ){
+      currentSection--
+      var scrollTo23 = $('section').eq(currentSection).offset().top
+      $('body').animate({
+        scrollTop: scrollTo23
+      })
+    }
+  }
+, down: function () {
+    if( currentSection < sectionCount ){
+      currentSection++
+      var scrollTo23 = $('section').eq(currentSection).offset().top
+      $('body').animate({
+        scrollTop: scrollTo23
+      })
+    }
+  }
+}
+// Keyboard nav
+var currentSection = 0
+  , sectionCount = $('section').length - 1
+
+$(document).keydown(function (evt) {
+  if ( evt.keyCode === 40 ) { // down arrow
+    evt.preventDefault()
+    page.down()
+  } else if (evt.keyCode === 38) { // up arrow
+    evt.preventDefault()
+    page.up()
+  }
+})
+
+
+// // Change section on scroll
+// var readyToScroll = true
+// $(document).bind('mousewheel DOMMouseScroll', function (evt) {
+//     evt.preventDefault()
+//     if(readyToScroll === true){
+//       if(evt.originalEvent.wheelDelta > 0){
+//         readyToScroll = false
+//         page.up()
+//         setTimeout(function () {
+//           readyToScroll = true
+//         }, 300)
+//       } else {
+//         readyToScroll = false
+//         page.down()
+//         setTimeout(function () {
+//           readyToScroll = true
+//         }, 300)
+//       }
+//     }
+// })
