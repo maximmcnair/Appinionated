@@ -45,7 +45,6 @@ $(window).load(function () {
       slideshowSpeed: 4000
     , controlNav: true
     , directionNav: true
-    , animation: 'slide'
     })
   })
 })
