@@ -44,8 +44,8 @@ input:focus{background-color:#233f56}
 .phone{display:block;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-webkit-transition:opacity 1s;-moz-transition:opacity 1s;-o-transition:opacity 1s;-ms-transition:opacity 1s;transition:opacity 1s}
 @media (min-width: 1110px) and (min-height: 568px){.phone--bottom{width:352px;height:314px;position:absolute;opacity:1;-ms-filter:none;filter:none;bottom:0;right:80px;height:350px;background-image:url("/imgs/landing-phone-bottom.png");background-position:top right}
 }@media (min-width: 1110px) and (min-height: 768px){.phone--top{width:352px;height:314px;position:absolute;opacity:1;-ms-filter:none;filter:none;top:0;left:40px;height:314px;background-image:url("/imgs/landing-phone-top.png");background-position:bottom left}
-}@media (min-width: 1110px){.arrow-down{display:block;width:42px;height:17px;background:url("/imgs/arrow.png");position:absolute;margin-left:-21px;bottom:55px;left:50%;-webkit-animation:arrowMovement 10s linear infinite;-moz-animation:arrowMovement 10s linear infinite;-o-animation:arrowMovement 10s linear infinite;-ms-animation:arrowMovement 10s linear infinite;animation:arrowMovement 10s linear infinite}
-}.keyboard-nav{display:none}
+}.arrow-down{display:block;width:42px;height:17px;background:url("/imgs/arrow.png");position:absolute;margin-left:-21px;bottom:55px;left:50%;-webkit-animation:arrowMovement 10s linear infinite;-moz-animation:arrowMovement 10s linear infinite;-o-animation:arrowMovement 10s linear infinite;-ms-animation:arrowMovement 10s linear infinite;animation:arrowMovement 10s linear infinite}
+.keyboard-nav{display:none}
 @media (min-width: 1110px){.no-touch .keyboard-nav{display:block;position:absolute;bottom:50px;left:50px;}
 .no-touch .keyboard-nav div{width:30px;height:30px;display:block;border:2px solid #fff;-webkit-border-radius:3px;border-radius:3px;margin:3px;}
 .no-touch .keyboard-nav div i{margin-top:7px;color:#fff;display:block;font-size:13px}
