@@ -2,6 +2,9 @@
   display block
   overflow hidden
   padding 50px 0px
+  p
+    font-size 17px
+    line-height 25px
 
 .review--text--dark
   color #454545
@@ -26,34 +29,20 @@
   overflow hidden
 
 
-.review--landscape
-  .review__image__wrapper
-    background url('/imgs/phone-landscape-white.png')
-    width 460px
-    height 230px
-  &.review--phone--dark
-    .review__image__wrapper
-      background url('/imgs/phone-landscape-black.png')
-  .slides
-    width 391px
-    height 205px
-    padding-left 68px
-    padding-top 24px
+// .review--landscape
+//   .review__image__wrapper
+//     background url('/imgs/phone-landscape-white.png')
+//     width 460px
+//     height 230px
+//   &.review--phone--dark
+//     .review__image__wrapper
+//       background url('/imgs/phone-landscape-black.png')
+//   .slides
+//     width 391px
+//     height 205px
+//     padding-left 68px
+//     padding-top 24px
 
-.review--portrait
-  .review__image__wrapper
-    background url('/imgs/phone-portrait-white.png')
-    width 230px
-    height 500px
-    margin 0 auto
-  &.review--phone--dark
-    .review__image__wrapper
-      background url('/imgs/phone-portrait-black.png')
-  .slides
-    width 205px
-    height 394px
-    padding-top 70px
-    padding-left 23px
 
 @media screen and (max-width: 700px)
   .review__image__wrapper
@@ -90,22 +79,51 @@
     h2
       margin-top 90px
 
+
+.review--portrait
+  .review__image__wrapper
+    background url('/imgs/phone-portrait-white.png')
+    width 230px
+    height 500px
+    margin 0 auto
+  &.review--phone--dark
+    .review__image__wrapper
+      background url('/imgs/phone-portrait-black.png')
+  .slides
+    width 205px
+    height 394px
+    padding-top 70px
+    padding-left 23px
+    img
+      width 100% !important
+
+@media (min-height: 1020px) and (min-height: 760px)
+  .review--portrait
+    .review__image__wrapper
+      width 310px
+      height 680px
+    .slides
+      width 276px
+      height 527px
+      padding-top 96px
+      padding-left 33px
+
 @media screen and (min-height: 600px)
   .review--portrait
-    padding 100px 0px
+    padding 50px 0px
 
 @media screen and (min-height: 700px)
   .review--portrait
-    padding 150px 0px
+    padding 100px 0px
 
-@media screen and (min-height: 800px)
-  .review--portrait
-    padding 170px 0px
+// @media screen and (min-height: 800px)
+//   .review--portrait
+//     padding 170px 0px
 
-@media screen and (min-height: 900px)
-  .review--portrait
-    padding 200px 0px
+// @media screen and (min-height: 900px)
+//   .review--portrait
+//     padding 200px 0px
 
-@media screen and (min-height: 1000px)
-  .review--portrait
-    padding 230px 0px
+// @media screen and (min-height: 1000px)
+//   .review--portrait
+//     padding 230px 0px
