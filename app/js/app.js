@@ -20,6 +20,7 @@ function adjustHeight ($elem) {
   }
 }
 
+
 function resize(){
   $('.landing').height(docHeight)
   // $('.tags').height(docHeight)
@@ -31,11 +32,11 @@ function resize(){
 
 resize()
 
-$( window ).resize(function() {
-  docHeight = $(window).height()
-  console.log('resize')
-  resize()
-})
+// $( window ).resize(function() {
+//   docHeight = $(window).height()
+//   console.log('resize')
+//   resize()
+// })
 
 
 // Init flexslider
@@ -49,21 +50,21 @@ $(window).load(function () {
   })
 })
 
-// Review first
-$('.js-review-first').on('click', function () {
-  scrollToElement('#sword-and-sorcery', 600)
-})
+// // Review first
+// // $('.js-review-first').on('click', function () {
+// //   scrollToElement('#sword-and-sorcery', 600)
+// // })
 
-function scrollToElement(selector, time, verticalOffset) {
-  time = typeof(time) != 'undefined' ? time : 1000;
-  verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
-  element = $(selector);
-  offset = element.offset();
-  offsetTop = offset.top + verticalOffset;
-  $('html, body').animate({
-    scrollTop: offsetTop
-  }, time);
-}
+// // function scrollToElement(selector, time, verticalOffset) {
+// //   time = typeof(time) != 'undefined' ? time : 1000;
+// //   verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+// //   element = $(selector);
+// //   offset = element.offset();
+// //   offsetTop = offset.top + verticalOffset;
+// //   $('html, body').animate({
+// //     scrollTop: offsetTop
+// //   }, time);
+// // }
 
 
 
@@ -127,23 +128,23 @@ $(document).keydown(function (evt) {
   }
 })
 
-// // Change section on scroll
-// var readyToScroll = true
-// $(document).bind('mousewheel DOMMouseScroll', function (evt) {
-//     evt.preventDefault()
-//     if(readyToScroll === true){
-//       if(evt.originalEvent.wheelDelta > 0){
-//         readyToScroll = false
-//         page.up()
-//         setTimeout(function () {
-//           readyToScroll = true
-//         }, 300)
-//       } else {
-//         readyToScroll = false
-//         page.down()
-//         setTimeout(function () {
-//           readyToScroll = true
-//         }, 300)
-//       }
-//     }
-// })
+// // // Change section on scroll
+// // var readyToScroll = true
+// // $(document).bind('mousewheel DOMMouseScroll', function (evt) {
+// //     evt.preventDefault()
+// //     if(readyToScroll === true){
+// //       if(evt.originalEvent.wheelDelta > 0){
+// //         readyToScroll = false
+// //         page.up()
+// //         setTimeout(function () {
+// //           readyToScroll = true
+// //         }, 300)
+// //       } else {
+// //         readyToScroll = false
+// //         page.down()
+// //         setTimeout(function () {
+// //           readyToScroll = true
+// //         }, 300)
+// //       }
+// //     }
+// // })

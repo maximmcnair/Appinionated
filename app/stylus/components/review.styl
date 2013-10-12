@@ -82,13 +82,14 @@
 
 .review--portrait
   .review__image__wrapper
-    background url('/imgs/phone-portrait-white.png')
+    background-image url('/imgs/phone-portrait-white.png')
+    background-size contain
     width 230px
     height 500px
     margin 0 auto
   &.review--phone--dark
     .review__image__wrapper
-      background url('/imgs/phone-portrait-black.png')
+      background-image url('/imgs/phone-portrait-black.png')
   .slides
     width 205px
     height 394px
@@ -97,7 +98,7 @@
     img
       width 100% !important
 
-@media (min-height: 1020px) and (min-height: 760px)
+@media (min-width: 1020px) and (min-height: 770px)
   .review--portrait
     .review__image__wrapper
       width 310px
