@@ -98,16 +98,42 @@
     img
       width 100% !important
 
+
+// @media (-webkit-min-device-pixel-ratio: 2),
+// @media (min-resolution: 192dpi)
+//   .review--portrait
+//     .review__image__wrapper
+//       background-image url('/imgs/phone-portrait-white@2x.png')
+//     &.review--phone--dark
+//       .review__image__wrapper
+//         background-image url('/imgs/phone-portrait-black@2x.png')
+
+
+
 @media (min-width: 1020px) and (min-height: 770px)
   .review--portrait
     .review__image__wrapper
+      background-image url('/imgs/phone-portrait-white-lrg.png')
       width 310px
       height 680px
+    &.review--phone--dark
+      .review__image__wrapper
+        background-image url('/imgs/phone-portrait-black-lrg.png')
     .slides
       width 276px
       height 527px
       padding-top 96px
       padding-left 33px
+
+
+@media (min-width: 1020px) and (min-height: 770px) and (-webkit-min-device-pixel-ratio: 2),
+@media (min-width: 1020px) and (min-height: 770px) and (min-resolution: 192dpi)
+  .review--portrait
+    .review__image__wrapper
+      background-image url('/imgs/phone-portrait-white-lrg@2x.png')
+    &.review--phone--dark
+      .review__image__wrapper
+        background-image url('/imgs/phone-portrait-black-lrg@2x.png')
 
 @media screen and (min-height: 600px)
   .review--portrait

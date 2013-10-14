@@ -100,7 +100,7 @@ var page = {
     if( currentSection !== 0 ){
       currentSection--
       var scrollTo23 = $('section').eq(currentSection).offset().top
-      $('body').animate({
+      $('body,html').animate({
         scrollTop: scrollTo23
       })
     }
@@ -109,17 +109,18 @@ var page = {
     if( currentSection < sectionCount ){
       currentSection++
       var scrollTo23 = $('section').eq(currentSection).offset().top
-      $('body').animate({
+      $('body,html').animate({
         scrollTop: scrollTo23
       })
     }
   }
 }
+
 // Keyboard nav
 var currentSection = 0
   , sectionCount = $('section').length - 1
 
-$(document).keydown(function (evt) {
+$(window).keydown(function (evt) {
   if ( evt.keyCode === 40 ) { // down arrow
     evt.preventDefault()
     page.down()
